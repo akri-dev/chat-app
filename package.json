@@ -1,0 +1,19 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "Chat App w\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[1;5C\u001b[: Simple Chat App with CRUD operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alecjoseph-dev/chat-app.git"
+  },
+  "author": "alecjoseph-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alecjoseph-dev/chat-app/issues"
+  },
+  "homepage": "https://github.com/alecjoseph-dev/chat-app#readme"
+}
