@@ -34,14 +34,14 @@ app.post('/messages', async (req, res) => {
 })
 
 // Read all messages
-app.get('/messages', (req, res) => {
-  Message.find({}, (err, messages) => {
-    if (err) {
-      res.sendStatus(500)
-    } else {
-      res.send(messages)
-    }
-  })
+app.get('/messages', async (req, res) => {
+  try {
+    const messages = await Message.find({})
+    res.send(messages)
+  } catch (err) {
+    console.error(err)
+    res.sendStatus(500)
+  }
 })
 
 // Update a message
@@ -84,3 +84,16 @@ io.on('connection', (socket) => {
 http.listen(3000, () => {
   console.log('Server started on port 3000')
 })
+
+const userSchema = new mongoose.Schema({
+    username: String,
+    password: String,
+    email: String,
+    firstName: String,
+    lastName: String,
+    avatar: String,
+    createdAt: { type: Date, default: Date.now },
+  })
+  
+  const User = mongoose.model('User', userSchema)
+  
